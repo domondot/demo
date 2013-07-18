@@ -96,6 +96,14 @@
          function changeClass(id,_class){
          	document.getElementById(id).className = _class;
          }
+         function changeActiveElement(el){
+            // makes the first element of the array el active
+            changeClass(el[0], "active")
+            for(var i = 1; i < tabs.length; i ++){
+               changeClass(el[i], "");
+            }
+            
+         }
       </script>
    </head>
    <body>
@@ -122,10 +130,10 @@
                   <td>
                      <div class="well" width="100%">
                         <ul class="nav nav-tabs">
-                           <li id="tabFilter" class="active" onclick='changeClass(this.id, "active")'>
+                           <li id="tabFilter" class="active" onclick='changeActiveElement([this.id,"tabSP"])'>
                            <a href="#">Filter</a>
                            </li>
-                           <li id="tabSP" onclick='changeClass(this.id, "active")' >
+                           <li id="tabSP" onclick='changeActiveElement([this.id,"tabFilter"])' >
                            <a href="#">Specific Pearsons</a>		
                            </li>
                         </ul>
