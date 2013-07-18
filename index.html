@@ -93,9 +93,8 @@
          }
       </style>
       <script>
-         function changeShareOpt(){
-         	tabFilter.class = "";
-         	tabSP.class = "active";
+         function changeToActive(id){
+         	document.getElementById(id).className = "active";
          }
       </script>
    </head>
@@ -126,7 +125,7 @@
                            <li id="tabFilter" class="active" onClick=" this.className="active"; document.getItemById("tabSP").className=""">
                            <a href="#">Filter</a>
                            </li>
-                           <li id="tabSP" onClick=" this.className="active"; document.getItemById("tabFilter").className="active" " >
+                           <li id="tabSP" onClick="changeToActive(this.id)" >
                            <a href="#">Specific Pearsons</a>		
                            </li>
                         </ul>
