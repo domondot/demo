@@ -98,9 +98,16 @@
         color: #ccccff;
       }
     </style>
+    <script>
+    	function changeShareOpt(){
+    		tabFilter.class = "";
+    		tabSP.class = "active";
+    	}
+    </script>
   </head>
   <body>
       <div class="hero-unit">
+      	
       	<div class="well">
 		<div>
 	        	<textarea rows="10"></textarea>
@@ -110,12 +117,21 @@
 			<button class="btn btn-success" type="button">Share</button>
 			<!--<span class="label label-info">Share with</span>-->
 			<div class="btn-group" data-toggle="buttons-radio">
-	 			<button type="button" class="btn btn-info">World</button>
-	 			<button type="button" class="btn btn-info">Friends</button>
-	 			<button type="button" class="btn btn-info">Groups</button>
+	 			<button id="world" type="button" class="btn btn-info" onclick="">World</button>
+	 			<button id="friends" type="button" class="btn btn-info">Friends</button>
+	 			<button id="groups" type="button" class="btn btn-info">Groups</button>
 			</div>
 	
 		</div>    
       </div>
+      <div class="well">
+      	<ul class="nav nav-tabs">
+		<li id="tabFilter" class="active" onClick="changeToSP()">
+			<a href="#">Filter</a>
+		</li>
+    		<li id="tabSP"><a href="#">Specific Pearsons</a></li>
+	</ul>
+      </div>
+      
   </body>
 </html>
