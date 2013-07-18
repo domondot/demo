@@ -93,8 +93,8 @@
          }
       </style>
       <script>
-         function changeToActive(id){
-         	document.getElementById(id).className = "active";
+         function changeClass(id,_class){
+         	document.getElementById(id).className = _class;
          }
       </script>
    </head>
@@ -122,10 +122,10 @@
                   <td>
                      <div class="well" width="100%">
                         <ul class="nav nav-tabs">
-                           <li id="tabFilter" class="active" onClick=" this.className="active"; document.getItemById("tabSP").className=""">
+                           <li id="tabFilter" class="active" onClick="changeClass(this.id, "active"); changeClass("tabSB", "")">
                            <a href="#">Filter</a>
                            </li>
-                           <li id="tabSP" onClick="changeToActive(this.id)" >
+                           <li id="tabSP" onClick="changeClass(this.id, "active"); changeClass("tabFiler", "")" >
                            <a href="#">Specific Pearsons</a>		
                            </li>
                         </ul>
