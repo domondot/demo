@@ -124,12 +124,14 @@
 	
 		</div>    
       </div>
-      <div class="well">
+      <div class="well pull-right">
       	<ul class="nav nav-tabs">
-		<li id="tabFilter" class="active" onClick="changeToSP()">
+		<li id="tabFilter" class="active" onClick=" this.className=""; document.getItemById("tabSP").className="active"">
 			<a href="#">Filter</a>
 		</li>
-    		<li id="tabSP"><a href="#">Specific Pearsons</a></li>
+    		<li id="tabSP" onClick=" this.className=""; document.getItemById("tabFilter").className="active" " >
+    			<a href="#">Specific Pearsons</a>		
+    		</li>
 	</ul>
       </div>
       
