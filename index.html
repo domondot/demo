@@ -93,17 +93,7 @@
          }
       </style>
       <script>
-         function changeClass(id,_class){
-         	document.getElementById(id).className = _class;
-         }
-         function changeActiveElement(el){
-            // makes the first element of the array el active
-            changeClass(el[0], "active");
-            for(var i = 1; i < el.length + 10; i ++){
-                  changeClass(el[i], "");
-            }
-            
-         }
+         typeahead = ["Boston", "Bamigi"]
       </script>
    </head>
    <body>
