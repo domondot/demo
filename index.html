@@ -127,11 +127,16 @@
                            </div>
                            <div class="btn-group">
                              <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                               Action
+                               Filter
                                <span class="caret"></span>
                              </a>
                              <ul class="dropdown-menu">
-                               <li><a tabindex="-1" href="#">Location</a></li>
+                               <li class="dropdown-submenu">
+                                  <a tabindex="-1" href="#">Location</a>
+                                  <ul class="dropdown-menu">
+                                    <input type="text" data-provide="typeahead">
+                                  </ul>
+                               </li>
                                <li><a tabindex="-1" href="#">Gender</a></li>
                              </ul>
                            </div>
